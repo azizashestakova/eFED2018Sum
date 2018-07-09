@@ -1,4 +1,10 @@
 include ../icon/icon
+include ../header/header
+include ../footer/footer
+include ../diagram_temperature/diagram_temperature
+include ../diagram_wind/diagram_wind
+include ../diagram_precipitation/diagram_precipitation
+
 
 doctype html
 html(lang='ru')
@@ -13,4 +19,10 @@ html(lang='ru')
 		script(src='./scripts/main.js' defer)
 	body
 		.hidden-svg#hidden-svg(data-path="./images/sprite.svg")
-		block page
+		.container
+	
+			+header()
+
+			block page
+
+			+footer()

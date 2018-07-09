@@ -1,0 +1,15 @@
+// footer styles 
+.footer{ 
+	// position: absolute; 
+	// bottom: 0; 
+	width: 100%; 
+	background-color: $background-grey; 
+	border-top: 1px solid $border; 
+	margin-top: 18px;
+	color: $dark-grey;
+	
+	&__copy { 
+		text-align: center; 
+		padding: 16px 0 18px; 
+	} 
+}

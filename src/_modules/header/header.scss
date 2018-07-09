@@ -1,0 +1,71 @@
+.header {
+
+	&__top {
+		background-color: $background-grey;
+		padding: 8px 23px;
+		border-bottom: 1px solid $border;
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			max-width: 355px;
+
+			li {
+				background-color: $button-light;
+				border: 1px solid $border;
+
+				&:hover,
+				&:active {
+					background-color: $button-grey;
+				}
+
+				a {
+					color: $dark-grey;
+					padding: 5px 15px;
+					display: inline-block;
+				}
+			}
+
+			.active {
+				background-color: $button-grey;
+			}
+		}
+	}
+
+	&__bottom {
+		background-color: $background-light-grey;
+		padding: 15px 20px 15px 10px;
+		border-bottom: 1px solid $border;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+
+		p {
+			color: $dark-grey;
+		}
+
+		input[type="search"] {
+			border: 1px solid $input-border;
+			border-radius: 4px;
+			background-color: $input-background;
+			color: $dark-grey;
+			outline: none;
+			padding-left: 35px;
+			height: 30px;
+			width: 335px;
+			background-image: url(../images/icon-search.png);   
+			background-repeat: no-repeat;   
+			background-size: 15px;
+    		background-position: 10px;
+
+			&::placeholder {
+				color: $input-placeholder;
+			}
+
+			&:active,
+			&:focus {
+				background-color: $button-light;
+			}
+		}
+	}
+}
