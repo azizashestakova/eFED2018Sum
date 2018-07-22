@@ -1,6 +1,32 @@
 .five-days {
     margin-top: 20px;
     border: 1px solid $border;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 60px;
+        display: block;
+        background-image: url(../images/arrow.png);
+        background-size: 60px;
+        top: 148px;
+        left: -41px;
+        transform: rotate(180deg);
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 60px;
+        display: block;
+        background-image: url(../images/arrow.png);
+        background-size: 60px;
+        top: 148px;
+        right: -41px;
+    }
     
     &-wrapper {
         height: 652px;

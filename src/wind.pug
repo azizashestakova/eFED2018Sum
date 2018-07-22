@@ -1,8 +1,8 @@
 extends _modules/layout/layout.pug
 
 block page
-	.weather
-		.weather-data
+	main.weather
+		section.weather-data
 			.weather-data__degrees
 				ul
 					li Ижевск, Россия
@@ -26,7 +26,7 @@ block page
 
 		+diagram-wind()
 
-		.weather-week
+		section.weather-week
 			.weather-week__item.active
 				p ср
 				img(src="/images/thunderstorms.png", alt="icon-weather" width="48px" height="48px")

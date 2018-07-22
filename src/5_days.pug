@@ -1,8 +1,8 @@
 extends _modules/layout/layout.pug
 
 block page
-    .five-days-wrapper
-        .five-days
+    main.five-days-wrapper
+        section.five-days
             .five-days__weather
                 .five-days__weather__item
                     .five-days__weather__item__date Пт, 20 мая
@@ -163,10 +163,10 @@ block page
                         img(src="/images/wave.png", alt="icon")
                     .precipitation__item__number 4.6
                         img(src="/images/max-wave.png", alt="icon")
-        .sun-moon
+        section.sun-moon
             .sun-moon__date Пятница, 18 мая, сегодня
             .sun-moon__title Солнце и луна
-        .sun-moon-block
+        section.sun-moon-block
             .sun-moon-block__item
                 .sun-moon-block__item__sun
                     img(src="/images/icon-sun.png", alt="icon-sun")
