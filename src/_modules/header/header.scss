@@ -53,10 +53,32 @@
 			padding-left: 35px;
 			height: 30px;
 			width: 335px;
-			background-image: url(../images/icon-search.png);   
-			background-repeat: no-repeat;   
-			background-size: 15px;
-    		background-position: 10px;
+			// background-image: url(../images/icon-search.png);   
+			// background-repeat: no-repeat;   
+			// background-size: 15px;
+			// background-position: 10px;
+			
+			& + label {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+
+				// &::before {
+				// 	// content: "";
+				// 	// display: block;
+				// 	// background-image: url(../images/icon-search.png);   
+				// 	// background-repeat: no-repeat;   
+				// 	// background-size: 15px;
+				// 	// width: 15px;
+				// 	// height: 15px;
+				// 	// background-position: 10px;
+				// 	content: "\2709";
+				// 	position: absolute;
+				// 	left: -1.2em;
+				// 	font-size: 23px;
+				// 	color: rgb(238, 238, 238);
+				// }
+			}
 
 			&::placeholder {
 				color: $input-placeholder;
@@ -67,5 +89,23 @@
 				background-color: $button-light;
 			}
 		}
+	}
+}
+
+label {
+	&::before {
+		// content: "";
+		// display: block;
+		// background-image: url(../images/icon-search.png);   
+		// background-repeat: no-repeat;   
+		// background-size: 15px;
+		// width: 15px;
+		// height: 15px;
+		// background-position: 10px;
+		content: "\2709";
+		position: absolute;
+		left: -1.2em;
+		font-size: 23px;
+		color: rgb(238, 238, 238);
 	}
 }

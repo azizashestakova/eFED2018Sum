@@ -10,4 +10,6 @@ mixin header(spec)
 					a(href="../weather_history.html") История погоды
 		.header__bottom
 			p Загрязнение воздуха: 8.16836305261858е-8
-			input(type="search" placeholder="Поиск")
+			form
+				input(type="search" id="search" placeholder="Поиск")
+				label(for="search") &nbsp;
