@@ -29,196 +29,216 @@
     }
     
     &-wrapper {
-        height: 652px;
+        height: 632px;
         padding: 0 45px;
     }
 
-    &__weather {
-        display: flex;
+    &__item {
+        display: inline-block;
+        width: 182px;
 
-        &__item {
-            width: 100%;
-            text-align: center;
+        &:not(:last-child) {
+            border-right: 1px solid $border;
+        }
 
-            &:not(:last-child) {
-                border-right: 1px solid $border;
-            }
+        &:last-child {
+            margin-right: -4px;
+        }
+    }
+    &__date {
+        padding: 11px 0;
+    }
 
-            &__date {
-                padding: 11px 0;
-            }
+    &__card {
+        border-top: 1px solid $border;
+        padding-bottom: 22px;
+        margin-left: -4px;
+    }
 
-            &__card {
-                border-top: 1px solid $border;
-                display: flex;
-                justify-content: space-around;
-                padding-bottom: 25px;
+    &__card-item {
+        margin-top: 10px;
+        display: inline-block;
 
-                &-item {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    margin-top: 10px;
-
-                    &:nth-child(1) {
-                        .five-days__weather__item__card-item__degrees  {
-                            background-color: $green;
-                        }
-                    }
-
-                    &:nth-child(2),
-                    &:nth-child(4) {
-                        .five-days__weather__item__card-item__degrees  {
-                            background-color: $yellow;
-                        }
-                    }
-
-                    &:nth-child(3) {
-                        .five-days__weather__item__card-item__degrees  {
-                            background-color: $orange;
-                        }
-                    }
-
-
-                    &__degrees {
-                        border: 1px solid $border;
-                        margin-top: 20px;
-                    }
-                }
+        &:nth-child(1) {
+            .five-days__card-degrees  {
+                background-color: $green;
             }
         }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            .five-days__card-degrees  {
+                background-color: $yellow;
+            }
+        }
+
+        &:nth-child(3) {
+            .five-days__card-degrees  {
+                background-color: $orange;
+            }
+        }
+
+        & span {
+            display: block;
+        }
+    }
+
+    &__card-img {
+        height: 44px;
+        margin-top: 3px;
+    }
+
+
+    &__card-degrees {
+        border: 1px solid $border;
+        margin-top: 17px;
     }
 }
 
 .wind-speed {
-    display: flex;
     border-top: 1px solid $border;
     
     &-title {
         border-top: 1px solid $border;
-        text-align: center;
         background-color: $background-grey;
-        padding: 9px 0;
+        padding: 6px 0;
     }
 
     &__item {
-        display: flex;
-        justify-content: space-around;
         border-right: 1px solid $border;
-        width: 100%;
-        padding: 10px 0;
+        padding: 10px 0 6px;
+        display: inline-block;
+        width: 183px;
 
-        &__number {
-            height: 18px;
-            width: 26px;
-            transform: skew(-42deg);
-            background-color: $background-grey;
-            position: relative;
+        &:last-child {
+            border-right: none;
+            margin-left: -2px;
+        }
+    }
 
-            span {
-                transform: skew(39deg);
-                display: block;
-                position: absolute;
-                left: 9px;
-            }
+    &__number {
+        height: 18px;
+        width: 26px;
+        transform: skew(-42deg);
+        background-color: $background-grey;
+        position: relative;
+        display: inline-block;
+        margin-left: 13px;
+
+        span {
+            transform: skew(39deg);
+            display: block;
+            position: absolute;
+            left: 9px;
         }
     }
 }
 .precipitation {
-    display: flex;
     border-top: 1px solid $border;
-    height: 105px;
 
     &-title {
         border-top: 1px solid $border;
-        text-align: center;
         background-color: $background-grey;
-        padding: 9px 0;
+        padding: 6px 0;
     }
 
     &__item {
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-        border-right: 1px solid $border;
-        align-items: flex-end;
+        border-right: 1px solid #aeaeae;
         position: relative;
+        display: inline-block;
+        width: 182px;
+        padding-top: 85px;
+        margin-right: 1px;
 
-        &__number {
-
-            &:nth-child(2) {
-
-                img {
-                    right: 102px;
-                }
-            }
-
-            &:nth-child(3) {
-
-                img {
-                    right: 62px;
-                }
-            }
-
-            &:nth-child(3) {
-
-                img.pos-right {
-                    right: 49px;
-                } 
-            }
-
-            &:nth-child(4) {
-
-                img {
-                    right: 9px;
-                }
-            }
+        &:last-child {
+            border-right: none;
+            margin-right: -2px;
         }
+    }
+
+    &__number {
+        display: inline-block;
+        width: 41px;
 
         img {
             position: absolute;
-            bottom: 0;
+            bottom: -1px;
             z-index: -1;
+        }
+
+        &:nth-child(2) {
+
+            img {
+                right: 97px;
+            }
+        }
+
+        &:nth-child(3) {
+
+            img {
+                right: 52px;
+            }
+        }
+
+        &:nth-child(3) {
+
+            img.pos-right {
+                right: 51px;
+            } 
+        }
+
+        &:nth-child(4) {
+
+            img {
+                right: 6px;
+            }
         }
     }
 }
 .sun-moon {
     margin-top: 13px;
     border: 1px solid $border;
-    display: flex;
     background-color: $card-border;
-    padding: 15px 0;
+    padding: 13px 0;
 
     &__date {
         padding-right: 200px;
         padding-left: 15px;
+        display: inline-block;
+    }
+
+    &__title {
+        display: inline-block;
     }
 
 }
 .sun-moon-block {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 25px;
+    margin-top: 22px;
 
     &__item {
+        display: inline-block;
+    }
 
-        &__sun,
-        &__moon {
-            display: flex;
+    &__sun {
+        margin-right: 59px;
+
+        img {
+            display: inline-block;
         }
+    }
 
-        &__params {
-            font-size: 18px;
-            margin-left: 37px;
+    &__params {
+        font-size: 18px;
+        margin-left: 37px;
+        display: inline-block;
+        text-align-last: left;
 
-            p:not(:first-child) {
-                margin-top: 37px;
-            }
+        p:not(:first-child) {
+            margin-top: 37px;
         }
+    }
 
-        &__text {
-            text-align: center;
-            margin-top: 18px;
-        }
+    &__text {
+        margin-top: 18px;
     }
 }

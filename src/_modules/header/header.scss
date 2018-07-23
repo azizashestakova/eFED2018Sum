@@ -6,13 +6,17 @@
 		border-bottom: 1px solid $border;
 
 		ul {
-			display: flex;
-			justify-content: space-between;
-			max-width: 355px;
+			word-spacing: -5px;
 
 			li {
 				background-color: $button-light;
 				border: 1px solid $border;
+				display: inline-block;
+				word-spacing: normal;
+
+				&:not(:last-child) {
+					margin-right: 25px;
+				}
 
 				&:hover,
 				&:active {
@@ -21,8 +25,10 @@
 
 				a {
 					color: $dark-grey;
-					padding: 5px 15px;
+					padding: 0 15px;
 					display: inline-block;
+					height: 30px;
+    			line-height: 29px;
 				}
 			}
 
@@ -36,12 +42,15 @@
 		background-color: $background-light-grey;
 		padding: 15px 20px 15px 10px;
 		border-bottom: 1px solid $border;
-		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
+		position: relative;
 
 		p {
 			color: $dark-grey;
+		}
+
+		form {
+			position: absolute;
+			right: 20px;
 		}
 
 		input[type="search"] {
@@ -53,31 +62,23 @@
 			padding-left: 35px;
 			height: 30px;
 			width: 335px;
-			// background-image: url(../images/icon-search.png);   
-			// background-repeat: no-repeat;   
-			// background-size: 15px;
-			// background-position: 10px;
 			
 			& + label {
-				position: relative;
-				display: inline-block;
-				vertical-align: middle;
+				position: absolute;
 
-				// &::before {
-				// 	// content: "";
-				// 	// display: block;
-				// 	// background-image: url(../images/icon-search.png);   
-				// 	// background-repeat: no-repeat;   
-				// 	// background-size: 15px;
-				// 	// width: 15px;
-				// 	// height: 15px;
-				// 	// background-position: 10px;
-				// 	content: "\2709";
-				// 	position: absolute;
-				// 	left: -1.2em;
-				// 	font-size: 23px;
-				// 	color: rgb(238, 238, 238);
-				// }
+				&::before {
+					content: "";
+					display: block;
+					background-image: url(../images/icon-search.png);
+					background-repeat: no-repeat;
+					background-size: 15px;
+					width: 15px;
+					height: 15px;
+					background-position: 0px;
+					position: absolute;
+					top: 0px;
+					margin-left: 11px;
+				}
 			}
 
 			&::placeholder {
@@ -89,23 +90,5 @@
 				background-color: $button-light;
 			}
 		}
-	}
-}
-
-label {
-	&::before {
-		// content: "";
-		// display: block;
-		// background-image: url(../images/icon-search.png);   
-		// background-repeat: no-repeat;   
-		// background-size: 15px;
-		// width: 15px;
-		// height: 15px;
-		// background-position: 10px;
-		content: "\2709";
-		position: absolute;
-		left: -1.2em;
-		font-size: 23px;
-		color: rgb(238, 238, 238);
 	}
 }

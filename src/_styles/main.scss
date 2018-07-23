@@ -35,20 +35,11 @@ html,body{
   min-height: 100%;
   height: 100%;
 }
-.wrapper{
-  // position: relative;
-  // height: 100%;
-  // min-height: 100%;
-  // width: 100%;
-  // padding-bottom: 80px;
-}
 
 .container {
-  // min-height: 100%;
   width: 1025px;
   margin: auto;
   border: 1px solid $border;
-  // position: relative;
   font-family: Arial, sans-serif;
 }
 
@@ -56,6 +47,8 @@ img{
   max-width: 100%;
 }
 
+
+//обнуление параметров
 ul {
   margin: 0;
   padding: 0;
@@ -75,4 +68,15 @@ p {
 
 figure {
   margin: 0;
+}
+
+//горизонтальное выравнивание
+.hor-alignment {
+  text-align: center;
+}
+
+//вертикальное выравнивание
+.ver-alignment {
+  transform: translateY(-50%);
+  top: 50%;
 }
