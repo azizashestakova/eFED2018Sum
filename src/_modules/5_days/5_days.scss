@@ -233,7 +233,7 @@
         display: inline-block;
         text-align-last: left;
 
-        p:not(:first-child) {
+        li:not(:first-child) {
             margin-top: 37px;
         }
     }

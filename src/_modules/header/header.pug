@@ -1,6 +1,6 @@
 mixin header(spec)
 	header.header 
-		.header__top 
+		.header__menu
 			ul
 				li.active 
 					a(href="./index.html") Сегодня 
@@ -8,7 +8,7 @@ mixin header(spec)
 					a(href="./5_days.html") 5 дней
 				li 
 					a(href="./weather_history.html") История погоды
-		.header__bottom
+		.header__information
 			p Загрязнение воздуха: 8.16836305261858е-8
 			form.ver-alignment
 				input(type="search" id="search" placeholder="Поиск")

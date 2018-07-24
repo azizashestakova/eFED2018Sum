@@ -1,74 +1,147 @@
 extends _modules/layout/layout.pug
 
 block page
-    .weather-history
-        .weather-history__month
-            .weather-history__month-item
-            .weather-history__month-item Январь
-            .weather-history__month-item Февраль
-            .weather-history__month-item Март
-            .weather-history__month-item Апрель
-            .weather-history__month-item Май
-            .weather-history__month-item Июнь
-            .weather-history__month-item Июль
-            .weather-history__month-item Август
-            .weather-history__month-item Сентябрь
-            .weather-history__month-item Октябрь
-            .weather-history__month-item Ноябрь
-            .weather-history__month-item Декабрь
-        .weather-history__midmax
-            .weather-history__midmax-item Средний максимум
-            .weather-history__midmax-item -9&deg;
-            .weather-history__midmax-item -8&deg;
-            .weather-history__midmax-item -1&deg;
-            .weather-history__midmax-item 7&deg;
-            .weather-history__midmax-item 18&deg;
-            .weather-history__midmax-item 23&deg;
-            .weather-history__midmax-item 25&deg;
-            .weather-history__midmax-item 22&deg;
-            .weather-history__midmax-item 15&deg;
-            .weather-history__midmax-item 7&deg;
-            .weather-history__midmax-item -2&deg;
-            .weather-history__midmax-item -7&deg;
-        .weather-history__midmin
-            .weather-history__midmin-item Средний минимум
-            .weather-history__midmin-item -16&deg;
-            .weather-history__midmin-item -15&deg;
-            .weather-history__midmin-item -9&deg;
-            .weather-history__midmin-item -1&deg;
-            .weather-history__midmin-item 7&deg;
-            .weather-history__midmin-item 12&deg;
-            .weather-history__midmin-item 14&deg;
-            .weather-history__midmin-item 12&deg;
-            .weather-history__midmin-item 7&deg;
-            .weather-history__midmin-item 0&deg;
-            .weather-history__midmin-item -7&deg;
-            .weather-history__midmin-item -12&deg;
-        .weather-history__recmax
-            .weather-history__recmax-item Рекордный максимум
-            .weather-history__recmax-item 3&deg;
-            .weather-history__recmax-item 3&deg;
-            .weather-history__recmax-item 9&deg;
-            .weather-history__recmax-item 24&deg;
-            .weather-history__recmax-item 30&deg;
-            .weather-history__recmax-item 36&deg;
-            .weather-history__recmax-item 38&deg;
-            .weather-history__recmax-item 37&deg;
-            .weather-history__recmax-item 30&deg;
-            .weather-history__recmax-item 22&deg;
-            .weather-history__recmax-item 12&deg;
-            .weather-history__recmax-item 4&deg;
-        .weather-history__recmin
-            .weather-history__recmin-item Рекордный минимум
-            .weather-history__recmin-item -39&deg;
-            .weather-history__recmin-item -39&deg;
-            .weather-history__recmin-item -30&deg;
-            .weather-history__recmin-item -22&deg;
-            .weather-history__recmin-item -7&deg;
-            .weather-history__recmin-item 0&deg;
-            .weather-history__recmin-item 4&deg;
-            .weather-history__recmin-item 1&deg;
-            .weather-history__recmin-item -4&deg;
-            .weather-history__recmin-item -21&deg;
-            .weather-history__recmin-item -29&deg;
-            .weather-history__recmin-item -40&deg;
+    //- .weather-history
+    //-     .weather-history__month
+    //-         .weather-history__month-item
+    //-         .weather-history__month-item Январь
+    //-         .weather-history__month-item Февраль
+    //-         .weather-history__month-item Март
+    //-         .weather-history__month-item Апрель
+    //-         .weather-history__month-item Май
+    //-         .weather-history__month-item Июнь
+    //-         .weather-history__month-item Июль
+    //-         .weather-history__month-item Август
+    //-         .weather-history__month-item Сентябрь
+    //-         .weather-history__month-item Октябрь
+    //-         .weather-history__month-item Ноябрь
+    //-         .weather-history__month-item Декабрь
+    //-     .weather-history__midmax
+    //-         .weather-history__midmax-item Средний максимум
+    //-         .weather-history__midmax-item -9&deg;
+    //-         .weather-history__midmax-item -8&deg;
+    //-         .weather-history__midmax-item -1&deg;
+    //-         .weather-history__midmax-item 7&deg;
+    //-         .weather-history__midmax-item 18&deg;
+    //-         .weather-history__midmax-item 23&deg;
+    //-         .weather-history__midmax-item 25&deg;
+    //-         .weather-history__midmax-item 22&deg;
+    //-         .weather-history__midmax-item 15&deg;
+    //-         .weather-history__midmax-item 7&deg;
+    //-         .weather-history__midmax-item -2&deg;
+    //-         .weather-history__midmax-item -7&deg;
+    //-     .weather-history__midmin
+    //-         .weather-history__midmin-item Средний минимум
+    //-         .weather-history__midmin-item -16&deg;
+    //-         .weather-history__midmin-item -15&deg;
+    //-         .weather-history__midmin-item -9&deg;
+    //-         .weather-history__midmin-item -1&deg;
+    //-         .weather-history__midmin-item 7&deg;
+    //-         .weather-history__midmin-item 12&deg;
+    //-         .weather-history__midmin-item 14&deg;
+    //-         .weather-history__midmin-item 12&deg;
+    //-         .weather-history__midmin-item 7&deg;
+    //-         .weather-history__midmin-item 0&deg;
+    //-         .weather-history__midmin-item -7&deg;
+    //-         .weather-history__midmin-item -12&deg;
+    //-     .weather-history__recmax
+    //-         .weather-history__recmax-item Рекордный максимум
+    //-         .weather-history__recmax-item 3&deg;
+    //-         .weather-history__recmax-item 3&deg;
+    //-         .weather-history__recmax-item 9&deg;
+    //-         .weather-history__recmax-item 24&deg;
+    //-         .weather-history__recmax-item 30&deg;
+    //-         .weather-history__recmax-item 36&deg;
+    //-         .weather-history__recmax-item 38&deg;
+    //-         .weather-history__recmax-item 37&deg;
+    //-         .weather-history__recmax-item 30&deg;
+    //-         .weather-history__recmax-item 22&deg;
+    //-         .weather-history__recmax-item 12&deg;
+    //-         .weather-history__recmax-item 4&deg;
+    //-     .weather-history__recmin
+    //-         .weather-history__recmin-item Рекордный минимум
+    //-         .weather-history__recmin-item -39&deg;
+    //-         .weather-history__recmin-item -39&deg;
+    //-         .weather-history__recmin-item -30&deg;
+    //-         .weather-history__recmin-item -22&deg;
+    //-         .weather-history__recmin-item -7&deg;
+    //-         .weather-history__recmin-item 0&deg;
+    //-         .weather-history__recmin-item 4&deg;
+    //-         .weather-history__recmin-item 1&deg;
+    //-         .weather-history__recmin-item -4&deg;
+    //-         .weather-history__recmin-item -21&deg;
+    //-         .weather-history__recmin-item -29&deg;
+    //-         .weather-history__recmin-item -40&deg;
+
+    main.weather-history
+        table.table-weather
+            tr
+                th.table-weather__th &nbsp;
+                th.table-weather__th Январь
+                th.table-weather__th Февраль
+                th.table-weather__th Март
+                th.table-weather__th Апрель
+                th.table-weather__th Май
+                th.table-weather__th Июнь
+                th.table-weather__th Июль
+                th.table-weather__th Август
+                th.table-weather__th Сентябрь
+                th.table-weather__th Октябрь
+                th.table-weather__th Ноябрь
+                th.table-weather__th Декабрь
+            tr
+                td.table-weather__td Средний минимум
+                td.table-weather__td -16&deg;
+                td.table-weather__td -15&deg;
+                td.table-weather__td -9&deg;
+                td.table-weather__td -1&deg;
+                td.table-weather__td 7&deg;
+                td.table-weather__td 13&deg;
+                td.table-weather__td 14&deg;
+                td.table-weather__td 12&deg;
+                td.table-weather__td 7&deg;
+                td.table-weather__td 0&deg;
+                td.table-weather__td -7&deg;
+                td.table-weather__td -12&deg;
+            tr
+                td.table-weather__td Рекордный максимум
+                td.table-weather__td 3&deg;
+                td.table-weather__td 3&deg;
+                td.table-weather__td 9&deg;
+                td.table-weather__td 24&deg;
+                td.table-weather__td 30&deg;
+                td.table-weather__td 36&deg;
+                td.table-weather__td 38&deg;
+                td.table-weather__td 37&deg;
+                td.table-weather__td 30&deg;
+                td.table-weather__td 22&deg;
+                td.table-weather__td 12&deg;
+                td.table-weather__td 4&deg;
+            tr
+                td.table-weather__td Средний максимум
+                td.table-weather__td -9&deg;
+                td.table-weather__td -8&deg;
+                td.table-weather__td -1&deg;
+                td.table-weather__td 7&deg;
+                td.table-weather__td 18&deg;
+                td.table-weather__td 23&deg;
+                td.table-weather__td 25&deg;
+                td.table-weather__td 22&deg;
+                td.table-weather__td 15&deg;
+                td.table-weather__td 7&deg;
+                td.table-weather__td -2&deg;
+                td.table-weather__td -7&deg;
+            tr
+                td.table-weather__td Рекордный минимум
+                td.table-weather__td -39&deg;
+                td.table-weather__td -39&deg;
+                td.table-weather__td -30&deg;
+                td.table-weather__td -22&deg;
+                td.table-weather__td -7&deg;
+                td.table-weather__td 0&deg;
+                td.table-weather__td 4&deg;
+                td.table-weather__td 1&deg;
+                td.table-weather__td -4&deg;
+                td.table-weather__td -21&deg;
+                td.table-weather__td -29&deg;
+                td.table-weather__td -4&deg;

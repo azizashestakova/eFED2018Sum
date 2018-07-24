@@ -1,6 +1,6 @@
 .header {
 
-	&__top {
+	&__menu {
 		background-color: $background-grey;
 		padding: 8px 23px;
 		border-bottom: 1px solid $border;
@@ -38,7 +38,7 @@
 		}
 	}
 
-	&__bottom {
+	&__information {
 		background-color: $background-light-grey;
 		padding: 15px 20px 15px 10px;
 		border-bottom: 1px solid $border;
