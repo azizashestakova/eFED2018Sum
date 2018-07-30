@@ -29,7 +29,7 @@
     }
     
     &-wrapper {
-        height: 652px;
+        // height: 652px;
         padding: 0 45px;
     }
 
@@ -98,7 +98,7 @@
         border-top: 1px solid $border;
         text-align: center;
         background-color: $background-grey;
-        padding: 9px 0;
+        padding: 11px 5px;
     }
 
     &__item {
@@ -129,11 +129,12 @@
     border-top: 1px solid $border;
     height: 105px;
 
+
     &-title {
         border-top: 1px solid $border;
         text-align: center;
         background-color: $background-grey;
-        padding: 9px 0;
+        padding: 11px 5px;
     }
 
     &__item {
@@ -177,7 +178,7 @@
 
         img {
             position: absolute;
-            bottom: 0;
+            bottom: -1px;
             z-index: -1;
         }
     }
@@ -187,11 +188,11 @@
     border: 1px solid $border;
     display: flex;
     background-color: $card-border;
-    padding: 15px 0;
+    padding: 15px;
+    flex-wrap: wrap;
 
     &__date {
         padding-right: 200px;
-        padding-left: 15px;
     }
 
 }
@@ -199,6 +200,7 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 25px;
+    flex-wrap: wrap;
 
     &__item {
 
@@ -219,6 +221,176 @@
         &__text {
             text-align: center;
             margin-top: 18px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .five-days {
+        display: flex;
+        border-right: none;
+        border-left: none;
+
+        &:before,
+        &:after {
+            display: none;
+        }
+
+        &-wrapper {
+            padding: 0;
+        }
+
+        &__weather {
+            flex-direction: column;
+            flex-grow: 6;
+            flex-shrink: 0;
+            flex-basis: 120px;
+
+            &__item {
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $border;
+                }
+
+                &:last-child {
+                    border-right: 1px solid $border;
+                }
+
+                &__card {
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    &-item {
+                        flex-direction: row;
+                        width: 100%;
+                        justify-content: space-around;
+                        align-items: baseline;
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .wind-speed {
+        height: calc(100% - 37px);
+        flex-direction: column;
+        border-right: 1px solid $border;
+
+        &__wrapper {
+            flex-grow: 3;
+            flex-shrink: 2;
+            flex-basis: 120px;
+            overflow: hidden;
+        }
+
+        &-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-top: none;
+            border-right: 1px solid $border;
+        }
+
+        &__item {
+            flex-direction: column;
+            height: 100%;
+            align-items: center;
+            height: 240px;
+            border-right: none;
+
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .precipitation {
+        height: calc(100% - 37px);
+        flex-direction: column;
+
+        &__wrapper {
+            flex-grow: 2;
+            flex-shrink: 3;
+            flex-basis: 85px;
+            overflow: hidden;
+        }
+
+        &-title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-top: none;
+        }
+
+        &__item {
+            flex-direction: column;
+            height: 100%;
+            border-right: none;
+            align-items: center;
+            height: 240px;
+            padding: 10px 0;
+
+            &:not(:first-child) {
+                margin-top: 40px;
+            }
+
+            &__number {
+            
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .sun-moon {
+        justify-content: space-between;
+
+        &__date {
+            padding-right: 0;
+        }
+    }
+
+    .sun-moon-block {
+    
+        &__item {
+            padding: 10px;
+
+            img {
+                width: 90px;
+                height: 90px;
+            }
+
+            &__params {
+                font-size: 16px;
+                margin-left: 20px;
+    
+                p:not(:first-child) {
+                    margin-top: 14px;
+                }
+            }
+    
+            &__text {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 544px) {
+    .sun-moon {
+
+        &__date,
+        &__title {
+            line-height: 23px;
+        }
+
+        &__date {
+            padding-right: 20px;
         }
     }
 }

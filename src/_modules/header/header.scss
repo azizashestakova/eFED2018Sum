@@ -1,14 +1,12 @@
 .header {
 
-	&__top {
+	&__nav {
 		background-color: $background-grey;
 		padding: 8px 23px;
 		border-bottom: 1px solid $border;
 
 		ul {
 			display: flex;
-			justify-content: space-between;
-			max-width: 355px;
 
 			li {
 				background-color: $button-light;
@@ -23,16 +21,21 @@
 					color: $dark-grey;
 					padding: 5px 15px;
 					display: inline-block;
+					font-size: 16px;
 				}
 			}
 
-			.active {
+			li:not(:last-child) {
+				margin-right: 23px;
+			}
+
+			li.active {
 				background-color: $button-grey;
 			}
 		}
 	}
 
-	&__bottom {
+	&__information {
 		background-color: $background-light-grey;
 		padding: 15px 20px 15px 10px;
 		border-bottom: 1px solid $border;
@@ -42,6 +45,7 @@
 
 		p {
 			color: $dark-grey;
+			font-size: 16px;
 		}
 
 		input[type="search"] {
@@ -49,36 +53,14 @@
 			border-radius: 4px;
 			background-color: $input-background;
 			color: $dark-grey;
-			outline: none;
 			padding-left: 35px;
 			height: 30px;
 			width: 335px;
-			// background-image: url(../images/icon-search.png);   
-			// background-repeat: no-repeat;   
-			// background-size: 15px;
-			// background-position: 10px;
-			
-			& + label {
-				position: relative;
-				display: inline-block;
-				vertical-align: middle;
-
-				// &::before {
-				// 	// content: "";
-				// 	// display: block;
-				// 	// background-image: url(../images/icon-search.png);   
-				// 	// background-repeat: no-repeat;   
-				// 	// background-size: 15px;
-				// 	// width: 15px;
-				// 	// height: 15px;
-				// 	// background-position: 10px;
-				// 	content: "\2709";
-				// 	position: absolute;
-				// 	left: -1.2em;
-				// 	font-size: 23px;
-				// 	color: rgb(238, 238, 238);
-				// }
-			}
+			background-image: url(../images/icon-search.png);   
+			background-repeat: no-repeat;   
+			background-size: 15px;
+			background-position: 10px;
+			font-size: 16px;
 
 			&::placeholder {
 				color: $input-placeholder;
@@ -92,20 +74,77 @@
 	}
 }
 
-label {
-	&::before {
-		// content: "";
-		// display: block;
-		// background-image: url(../images/icon-search.png);   
-		// background-repeat: no-repeat;   
-		// background-size: 15px;
-		// width: 15px;
-		// height: 15px;
-		// background-position: 10px;
-		content: "\2709";
-		position: absolute;
-		left: -1.2em;
-		font-size: 23px;
-		color: rgb(238, 238, 238);
+@media (max-width: 992px) {
+	.header {
+
+		&__nav {
+			padding: 12px 23px;
+	
+			ul {
+	
+				li {
+
+					a {
+						padding: 6px 18px;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+
+		&__information {
+
+			p {
+				font-size: 18px;
+			}
+
+			input[type="search"] {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+
+		&__information {
+			flex-direction: column;
+
+			form {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: 544px) {
+	.header {
+
+		&__nav {
+
+			padding-bottom: 0;
+	
+			ul {
+				flex-wrap: wrap;
+
+				li {
+					margin-bottom: 12px;
+				}
+
+				li:not(:last-child) {
+					margin-bottom: 12px;
+					margin-right: 12px;
+				}
+			}
+		}
+
+		&__information {
+			padding: 15px 10px 15px 10px;
+
+			input[type="search"] {
+				width: 100%;
+			}
+		}
 	}
 }

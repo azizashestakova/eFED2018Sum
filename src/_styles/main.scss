@@ -41,12 +41,21 @@ html,body{
   // min-height: 100%;
   // width: 100%;
   // padding-bottom: 80px;
+  width: 1025px;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    width: 100%;
+  }
 }
 
 .container {
   // min-height: 100%;
-  width: 1025px;
+  // width: 1025px;
   margin: auto;
+  width: 100%;
   border: 1px solid $border;
   // position: relative;
   font-family: Arial, sans-serif;

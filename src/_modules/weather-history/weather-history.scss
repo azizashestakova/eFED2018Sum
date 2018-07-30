@@ -1,6 +1,6 @@
 .weather-history {
     padding-top: 80px;
-    height: 652px;
+    // height: 652px;
     font-size: 15px;
     color: $dark-grey;
     
@@ -37,5 +37,28 @@
         &__item:nth-child(even) {
                 background-color: $background-weather-history;
         }    
+    }
+}
+
+@media (max-width: 992px) {
+    .weather-history {
+        display: flex;
+        padding-top: 50px;
+        padding-bottom: 32px;
+
+        &__month,
+        &__midmax,
+        &__midmin,
+        &__recmax,
+        &__recmin {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 544px) {
+    .weather-history {
+        font-size: 12px;
     }
 }

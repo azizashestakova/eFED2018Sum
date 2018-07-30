@@ -1,5 +1,5 @@
 .weather {
-    height: 652px;
+    // height: 652px;
 
     &-data {
         display: flex;
@@ -39,7 +39,7 @@
 
                 &:nth-of-type(2) {
                     display: flex;
-                    margin-top: 40px;
+                    flex-wrap: wrap;
 
 					li {
 						background-color: $button-light;
@@ -49,6 +49,7 @@
                         align-items: center;
                         height: 50px;
                         cursor: pointer;
+                        margin-top: 40px;
 
 						&:hover,
 						&:active {
@@ -278,6 +279,7 @@
         &__item {
             width: 125px;
             height: 150px;
+            font-size: 16px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -449,6 +451,210 @@
         &__time {
             display: flex;
             justify-content: space-around;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .weather {
+    
+        &-data {
+            padding: 50px 80px 0 50px;
+
+            &__degrees {
+
+                ul {
+    
+                    li {
+                        font-size: 29px;
+                        line-height: 35px;
+                    }
+                }
+            }
+
+            &__options {
+                
+                ul {
+    
+                    &:nth-of-type(1) {
+                        font-size: 29px;
+                        line-height: 35px;
+                    }
+                }
+            }
+        }
+
+        .diagram {
+            margin-top: 60px;
+        }
+
+        .diagram__block {
+            width: 100%;
+        }
+
+        .diagram__item {
+            width: 0;
+
+            &-hour span {
+                left: -11px;
+            }
+        }
+
+        .diagram__time {
+            margin-top: 12px;
+        }
+
+        &-week {
+        
+            &__item {
+                height: 125px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .weather {
+    
+        &-data {
+            padding: 30px 30px 0 30px;
+            flex-direction: column;
+
+            &__degrees {
+                display: flex;
+                flex-wrap: wrap;
+
+                ul {
+                    margin-right: 15px;
+
+                    li {
+                        min-width: 210px;
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+                }
+
+                figure {
+                    font-size: 33px;
+
+                    img {
+                        width: 85px;
+                        height: 70px;
+                    }
+                }
+            }
+
+            &__options {
+                margin-top: 20px;
+
+                ul {
+
+                    &:nth-of-type(1) {
+                        font-size: 25px;
+                        line-height: 30px;
+                    }
+    
+                    &:nth-of-type(2) {
+                        
+                        li {
+                            margin-top: 20px;
+                            height: 45px;
+
+                            a {
+                                font-size: 14px;
+                                padding: 14px;
+                            }
+                        }
+
+                        & li:nth-child(2) a {
+                            padding: 6px 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-week {
+        
+            &__item {
+                height: 88px;
+                font-size: 14px;
+            }
+        }
+
+        .diagram__time {
+            font-size: 14px;
+            margin-top: 20px;
+            letter-spacing: -1px;
+        }
+    }
+
+    .diagram-temperature {
+        margin-top: 70px;
+
+        &__item {
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .diagram {
+
+        &-wind {
+            margin-top: 40px;
+    
+            &__units {
+                font-size: 14px;
+            }
+
+            &__direction {
+                margin-top: 23px;
+                
+                img {
+                    width: 30px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 544px) {
+    .weather {
+    
+        &-data {
+            padding: 40px 40px 0 40px;
+
+            &__degrees {
+
+                ul {
+
+                    li {
+                    }
+                }
+            }
+
+            &__options {
+
+                ul {
+    
+                    &:nth-of-type(2) {
+                    }
+                }
+            }
+        }
+
+        &-week {
+            flex-direction: column;
+        
+            &__item {
+                height: 88px;
+                flex-direction: row;
+                width: 100%;
+                font-size: 14px;
+            }
         }
     }
 }

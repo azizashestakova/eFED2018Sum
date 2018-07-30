@@ -19,10 +19,11 @@ html(lang='ru')
 		script(src='./scripts/main.js' defer)
 	body
 		.hidden-svg#hidden-svg(data-path="./images/sprite.svg")
-		.container
-	
-			+header()
+		.wrapper
+			.container
+		
+				+header()
 
-			block page
+				block page
 
-			+footer()
+				+footer()
