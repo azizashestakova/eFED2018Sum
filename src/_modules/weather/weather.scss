@@ -457,6 +457,40 @@
 
 @media (max-width: 992px) {
     .weather {
+        .diagram__block:nth-child(1),
+        .diagram__block:nth-child(2),
+        .diagram__block:nth-child(3),
+        .diagram__block:nth-child(4),
+        .diagram__block:nth-child(5),
+        .diagram__block:nth-child(6),
+        .diagram__block:nth-child(7),
+        .diagram__block:nth-child(8),
+        .diagram__block:nth-child(9),
+        .diagram__block:nth-child(10),
+        .diagram__block:nth-child(11),
+        .diagram__block:nth-child(12),
+        .diagram__block:nth-child(13),
+        .diagram__block:nth-child(14),
+        .diagram__block:nth-child(15),
+        .diagram__block:nth-child(16),
+        .diagram__block:nth-child(17),
+        .diagram__block:nth-child(18),
+        .diagram__block:nth-child(19),
+        .diagram__block:nth-child(20),
+        .diagram__block:nth-child(21),
+        .diagram__block:nth-child(22),
+        .diagram__block:nth-child(23),
+        .diagram__block:nth-child(24) {
+            .diagram__item-hour:nth-of-type(1),
+            .diagram__item-hour:nth-of-type(2),
+            .diagram__item-hour:nth-of-type(3) {
+                height: 0;
+                border-top: none;
+            }
+        }
+    }
+
+    .weather {
     
         &-data {
             padding: 50px 80px 0 50px;
@@ -625,13 +659,20 @@
     .weather {
     
         &-data {
-            padding: 40px 40px 0 40px;
+            padding: 20px 20px 0 20px;
 
             &__degrees {
+            }
+
+            &__options {
 
                 ul {
 
-                    li {
+                    &:nth-of-type(2){
+
+                        li {
+                            width: 100%;
+                        }
                     }
                 }
             }

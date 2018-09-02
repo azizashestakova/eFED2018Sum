@@ -78,15 +78,15 @@
 	.header {
 
 		&__nav {
-			padding: 12px 23px;
+			// padding: 12px 23px;
 	
 			ul {
 	
 				li {
 
 					a {
-						padding: 6px 18px;
-						font-size: 18px;
+						// padding: 6px 18px;
+						// font-size: 18px;
 					}
 				}
 			}
@@ -95,11 +95,11 @@
 		&__information {
 
 			p {
-				font-size: 18px;
+				// font-size: 18px;
 			}
 
 			input[type="search"] {
-				font-size: 18px;
+				// font-size: 18px;
 			}
 		}
 	}
@@ -122,18 +122,25 @@
 	.header {
 
 		&__nav {
-
+			padding-left: 12px;
+			padding-right: 12px;
 			padding-bottom: 0;
 	
 			ul {
 				flex-wrap: wrap;
 
 				li {
-					margin-bottom: 12px;
+					margin-bottom: 8px;
+					margin-right: 8px;
+
+					a {
+						padding: 6px 7px;
+						font-size: 14px;
+					}
 				}
 
 				li:not(:last-child) {
-					margin-bottom: 12px;
+					// margin-bottom: 12px;
 					margin-right: 12px;
 				}
 			}
