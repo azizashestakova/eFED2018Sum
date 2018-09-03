@@ -3,8 +3,8 @@ extends _modules/layout/layout.pug
 block page
     main.five-days-wrapper
         section.five-days
-            .five-days__weather
-                .five-days__weather__item
+            .five-days__weather#fiveDaysContainer
+                .five-days__weather__item.temperature-daytime.active
                     .five-days__weather__item__date Пт, 20 мая
                     .five-days__weather__item__card
                         .five-days__weather__item__card-item
@@ -23,64 +23,7 @@ block page
                             span Вечер
                             img(src="/images/icon-sunny.png", alt="icon-weather")
                             .five-days__weather__item__card-item__degrees +17
-                .five-days__weather__item
-                    .five-days__weather__item__date Пт, 20 мая
-                    .five-days__weather__item__card
-                        .five-days__weather__item__card-item
-                            span Ночь
-                            img(src="/images/icon-cloudy.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +8
-                        .five-days__weather__item__card-item
-                            span Утро
-                            img(src="/images/icon-rain.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +16
-                        .five-days__weather__item__card-item
-                            span День
-                            img(src="/images/icon-rain-wind.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +21
-                        .five-days__weather__item__card-item
-                            span Вечер
-                            img(src="/images/icon-sunny.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +17
-                .five-days__weather__item
-                    .five-days__weather__item__date Пт, 20 мая
-                    .five-days__weather__item__card
-                        .five-days__weather__item__card-item
-                            span Ночь
-                            img(src="/images/icon-cloudy.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +8
-                        .five-days__weather__item__card-item
-                            span Утро
-                            img(src="/images/icon-rain.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +16
-                        .five-days__weather__item__card-item
-                            span День
-                            img(src="/images/icon-rain-wind.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +21
-                        .five-days__weather__item__card-item
-                            span Вечер
-                            img(src="/images/icon-sunny.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +17
-                .five-days__weather__item
-                    .five-days__weather__item__date Пт, 20 мая
-                    .five-days__weather__item__card
-                        .five-days__weather__item__card-item
-                            span Ночь
-                            img(src="/images/icon-cloudy.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +8
-                        .five-days__weather__item__card-item
-                            span Утро
-                            img(src="/images/icon-rain.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +16
-                        .five-days__weather__item__card-item
-                            span День
-                            img(src="/images/icon-rain-wind.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +21
-                        .five-days__weather__item__card-item
-                            span Вечер
-                            img(src="/images/icon-sunny.png", alt="icon-weather")
-                            .five-days__weather__item__card-item__degrees +17
-                .five-days__weather__item
+                .five-days__weather__item.temperature-daytime
                     .five-days__weather__item__date Пт, 21 мая
                     .five-days__weather__item__card
                         .five-days__weather__item__card-item
@@ -90,6 +33,25 @@ block page
                         .five-days__weather__item__card-item
                             span Утро
                             img(src="/images/icon-rain.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +6
+                        .five-days__weather__item__card-item
+                            span День
+                            img(src="/images/icon-rain-wind.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +2
+                        .five-days__weather__item__card-item
+                            span Вечер
+                            img(src="/images/icon-sunny.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +4
+                .five-days__weather__item.temperature-daytime
+                    .five-days__weather__item__date Пт, 22 мая
+                    .five-days__weather__item__card
+                        .five-days__weather__item__card-item
+                            span Ночь
+                            img(src="/images/icon-cloudy.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +8
+                        .five-days__weather__item__card-item
+                            span Утро
+                            img(src="/images/icon-rain.png", alt="icon-weather")
                             .five-days__weather__item__card-item__degrees +16
                         .five-days__weather__item__card-item
                             span День
@@ -98,7 +60,53 @@ block page
                         .five-days__weather__item__card-item
                             span Вечер
                             img(src="/images/icon-sunny.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +22
+                .five-days__weather__item.temperature-daytime
+                    .five-days__weather__item__date Пт, 23 мая
+                    .five-days__weather__item__card
+                        .five-days__weather__item__card-item
+                            span Ночь
+                            img(src="/images/icon-cloudy.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +20
+                        .five-days__weather__item__card-item
+                            span Утро
+                            img(src="/images/icon-rain.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +19
+                        .five-days__weather__item__card-item
+                            span День
+                            img(src="/images/icon-rain-wind.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +22
+                        .five-days__weather__item__card-item
+                            span Вечер
+                            img(src="/images/icon-sunny.png", alt="icon-weather")
                             .five-days__weather__item__card-item__degrees +17
+                .five-days__weather__item.temperature-daytime
+                    .five-days__weather__item__date Пт, 24 мая
+                    .five-days__weather__item__card
+                        .five-days__weather__item__card-item
+                            span Ночь
+                            img(src="/images/icon-cloudy.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +18
+                        .five-days__weather__item__card-item
+                            span Утро
+                            img(src="/images/icon-rain.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +16
+                        .five-days__weather__item__card-item
+                            span День
+                            img(src="/images/icon-rain-wind.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +21
+                        .five-days__weather__item__card-item
+                            span Вечер
+                            img(src="/images/icon-sunny.png", alt="icon-weather")
+                            .five-days__weather__item__card-item__degrees +15
+                img(src="../images/arrow.png", alt="").prev
+                img(src="../images/arrow.png", alt="").next
+                .tabs
+                    .tab.tabact(data-id="1") Пт
+                    .tab(data-id="2") Сб
+                    .tab(data-id="3") Вс
+                    .tab(data-id="4") Пн
+                    .tab(data-id="5") Вт
             .wind-speed__wrapper
                 .wind-speed-title Максимальная скорость ветра, м/c
                 .wind-speed
