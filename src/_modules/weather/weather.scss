@@ -68,6 +68,10 @@
                                 padding: 7px 15px;
                             }
                         }
+
+                        .knob.active {
+                            background-color: $button-grey;
+                        }
                     }
                     
                     li:not(:last-child) {
@@ -75,7 +79,7 @@
                     }
 
 					.active {
-						background-color: $button-grey;
+						// background-color: $button-grey;
 					}
                 }
             }
@@ -697,5 +701,15 @@
                 font-size: 14px;
             }
         }
+    }
+}
+
+
+///// переключатель кнопок
+.diagram-wrapper {
+    display: none;
+
+    &.active {
+        display: block;
     }
 }

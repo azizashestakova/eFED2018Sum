@@ -1,7 +1,7 @@
 extends _modules/layout/layout.pug
 
 block page
-	main.weather
+	main.weather#weatherTabs
 		section.weather-data
 			.weather-data__degrees
 				ul
@@ -17,16 +17,113 @@ block page
 					li Влажность: 45&#37;
 					li Ветер: 11км/ч
 				ul
-					li 
-						a(href="../temperature.html") Температура
-					li.active 
-						a(href="../index.html") Вероятность осадков
-					li 
-						a(href="../wind.html") Ветер
+					li
+						a(href="#" data-id2="1").knob Температура
+					li
+						a(href="#" data-id2="2").knob Вероятность осадков
+					li
+						a(href="#" data-id2="3").knob.active  Ветер
 
-		+diagram-precipitation()
-		//- +diagram-temperature()
-		//- +diagram-wind()
+
+		.diagram-wrapper
+			.diagram-wind
+				.diagram-wind__units
+					span 7м/с
+					span 5м/с
+					span 5м/с
+					span 5м/с
+					span 6м/с
+					span 6м/с
+					span 6м/с
+					span 5м/с
+				.diagram-wind__direction
+					img(src="/images/wind_unselected.png", alt="icon-direction" width="40px" height="30px")
+					img(src="/images/wind_unselected.png", alt="icon-direction" width="40px" height="30px")
+					img(src="/images/wind_unselected.png", alt="icon-direction" width="40px" height="30px")
+					img(src="/images/wind_unselected.png", alt="icon-direction" width="40px" height="30px")
+					img(src="/images/wind_unselected.png", alt="icon-direction" width="40px" height="30px")
+					img(src="/images/wind_unselected.png", alt="icon-direction" width="40px" height="30px")
+					img(src="/images/wind_unselected.png", alt="icon-direction" width="40px" height="30px")
+					img(src="/images/wind_unselected.png", alt="icon-direction" width="40px" height="30px")
+				.diagram-wind__time
+					.diagram__time 17:00
+					.diagram__time 20:00
+					.diagram__time 23:00
+					.diagram__time 2:00
+					.diagram__time 5:00
+					.diagram__time 8:00
+					.diagram__time 11:00
+					.diagram__time 14:00
+		.diagram-wrapper
+			.diagram-temperature
+				.diagram-temperature__item #[span 14]
+				.diagram-temperature__item #[span 14]
+				.diagram-temperature__item #[span 14]
+				.diagram-temperature__item #[span 12]
+				.diagram-temperature__item #[span 11]
+				.diagram-temperature__item #[span 13]
+				.diagram-temperature__item #[span 14]
+				.diagram-temperature__item #[span 14]
+
+			.diagram-wrapper__time
+				.diagram__time 17:00
+				.diagram__time 20:00
+				.diagram__time 23:00
+				.diagram__time 2:00
+				.diagram__time 5:00
+				.diagram__time 8:00
+				.diagram__time 11:00
+				.diagram__time 14:00
+		.diagram-wrapper.active
+			.diagram
+				.diagram__block
+					.diagram__item
+						.diagram__item-hour
+						.diagram__item-hour #[span 24&#37;]
+						.diagram__item-hour
+					.diagram__time 17:00
+				.diagram__block
+					.diagram__item
+						.diagram__item-hour
+						.diagram__item-hour #[span 30&#37;]
+						.diagram__item-hour
+					.diagram__time 20:00
+				.diagram__block
+					.diagram__item
+						.diagram__item-hour
+						.diagram__item-hour #[span 24&#37;]
+						.diagram__item-hour
+					.diagram__time 23:00
+				.diagram__block
+					.diagram__item
+						.diagram__item-hour
+						.diagram__item-hour #[span 8&#37;]
+						.diagram__item-hour
+					.diagram__time 2:00
+				.diagram__block
+					.diagram__item
+						.diagram__item-hour
+						.diagram__item-hour #[span 4&#37;]
+						.diagram__item-hour
+					.diagram__time 5:00
+				.diagram__block
+					.diagram__item
+						.diagram__item-hour
+						.diagram__item-hour #[span 6&#37;]
+						.diagram__item-hour
+					.diagram__time 8:00
+				.diagram__block
+					.diagram__item
+						.diagram__item-hour
+						.diagram__item-hour #[span 0&#37;]
+						.diagram__item-hour
+					.diagram__time 11:00
+				.diagram__block
+					.diagram__item
+						.diagram__item-hour
+						.diagram__item-hour #[span 1&#37;]
+						.diagram__item-hour
+					.diagram__time 14:00
 
 		section.weather-week
 			.weather-week__item.active
