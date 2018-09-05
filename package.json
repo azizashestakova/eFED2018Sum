@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "node-sass": "^4.9.0",
+    "node-static": "^0.7.10",
     "normalize.css": "^8.0.0"
   },
   "devDependencies": {

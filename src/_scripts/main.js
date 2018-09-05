@@ -4,19 +4,6 @@ var fiveDaysContainer = document.getElementById('fiveDaysContainer');
 var elements = document.querySelectorAll('.temperature-daytime');
 var tabs = document.querySelectorAll('.tab');
 
-// fiveDaysContainer.onclick = function(event) { 
-//   if (event.target.className === 'next') { 
-//     showNext() 
-//   }
-//   if (event.target.className === 'prev') { 
-//     showPrev() 
-//   } 
-//   if (event.target.classList.contains('tab')) { 
-//     showDay(event.target)
-//   }
-// } 
-
-
 if(fiveDaysContainer) fiveDaysContainer.addEventListener('click', function(event) { 
   if (event.target.className === 'next') { 
     showNext() 
